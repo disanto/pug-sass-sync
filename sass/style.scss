@@ -1,0 +1,186 @@
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+header {
+	z-index: 1;
+}
+
+.grid {
+
+	border:1px solid #ccc;
+	border-bottom: none;
+	border-top: none;
+	box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+	min-height: calc(100vh - 228px);
+	margin: 0;
+	background: {
+		image: url(../img/bkgd-pep.jpg);
+		size: cover;
+	}
+}
+
+.material-icons {
+	font-size: 18px;
+	color: #444;
+}
+
+main {
+	flex: 1;
+}
+
+footer {
+	text-align: center;
+
+	z-index: 1;
+
+	a {
+		color: #fff;
+	}
+
+	ul {
+		width: 8rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+}
+
+.card__container {
+	padding: 0;
+}
+
+.card {
+	
+	border: none;
+	border-left: 1px solid #ccc;
+	box-shadow: none;
+	min-height: calc(100vh - 228px);
+	margin-bottom: 0;
+
+	h3 {
+		margin-bottom: .25em;
+	}
+
+	hr {
+		margin: 0;
+	}
+}
+
+.password-requirements {
+	border-left: 4px solid #ddd;
+	padding-left: .5rem;
+}
+
+header.navbar.navbar--logo-mobile {
+	display: none;
+}
+
+// Help Page
+
+.card__help {
+    
+    h4 {
+        margin-bottom: .75rem;
+    }
+
+    p {
+        margin-bottom: .25rem;
+    }
+    
+}
+
+
+// Legal Pages
+
+.legal {
+    background: #fff;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+
+// Media Queries
+
+@media (max-width: 1152px) {
+	main {
+		.container {
+			padding: 0;
+		}
+	}
+
+    .legal {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+
+	header.navbar.navbar--logo-mobile {
+		display: block;
+	}
+	header.navbar.navbar--logo-1 {
+		display: none;
+	}
+	header.navbar.navbar--logo-2 {
+		display: none;
+	}
+
+	.cell.span-8 {
+		display: none;
+	}
+
+	.grid {
+		background: none;
+		box-shadow: none;
+		border: none;
+		min-height: 0;
+	}
+	.card__container {
+
+		width: 100%;
+	}
+	.card__body {
+		width: 320px;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 512px) {
+	.card__body {
+		width: 100vw;
+		padding-right: 24px;
+		padding-left: 24px;
+	}
+
+	.card__help {
+        
+        padding-left: 8px;
+        padding-right: 8px;
+
+        h4 {
+            text-align: center;
+        } 
+
+        p {
+            padding-left: .5em;
+        }
+		
+	}
+
+    .u--font-size-0875 {
+        font-size: 12px !important;
+    }
+
+    .legal h1 {
+        font-size: 1.6em;
+    }
+
+    .legal h2 {
+        font-size: 1.4em;
+    }
+
+}
